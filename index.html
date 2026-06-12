@@ -2,157 +2,153 @@
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSR Music Radio</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#121212;
-color:white;
-text-align:center;
+    margin:0;
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
 }
 
-.header{
-padding:30px;
+.hero{
+    padding:60px 20px;
 }
 
 .logo{
-font-size:40px;
-font-weight:bold;
+    font-size:48px;
+    font-weight:bold;
 }
 
-.subtitle{
-color:#bbbbbb;
+.tagline{
+    color:#b3b3b3;
+    margin-top:10px;
+    font-size:18px;
 }
 
-.cover{
-width:250px;
-height:250px;
-border-radius:20px;
-margin-top:20px;
-object-fit:cover;
-box-shadow:0 0 20px rgba(255,255,255,.15);
+.channel-card{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
 }
 
-.buttons{
-margin-top:25px;
+.card{
+    background:#181818;
+    width:250px;
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
 }
 
-button{
-padding:12px 25px;
-margin:8px;
-font-size:16px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-background:#1DB954;
-color:white;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-button:hover{
-opacity:.8;
+.card h2{
+    margin-top:0;
 }
 
-.channel{
-margin-top:30px;
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#1DB954;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
 }
 
-iframe{
-border:none;
-width:90%;
-height:500px;
-border-radius:20px;
-margin-top:20px;
+.btn:hover{
+    opacity:0.8;
 }
 
 .footer{
-margin-top:30px;
-padding:20px;
-color:#888;
+    margin-top:50px;
+    padding:20px;
+    color:#888;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="header">
+<div class="hero">
 
-<div class="logo">
-🎵 SSR Music Radio
-</div>
+<h1 class="logo">🎵 SSR Music Radio</h1>
 
-<div class="subtitle">
-AI Music • English • Malay • Hindi
-</div>
-
-<img class="cover"
-src="https://yt3.googleusercontent.com/ytc-placeholder=s176-c-k-c0x00ffffff-no-rj"
-id="cover">
-
-<div class="channel">
-
-<button onclick="loadMalay()">
-🇲🇾 Malay
-</button>
-
-<button onclick="loadEnglish()">
-🇬🇧 English
-</button>
-
-<button onclick="loadHindi()">
-🇮🇳 Hindi
-</button>
+<p class="tagline">
+Listen to AI-generated music by Romantic AI Music
+</p>
 
 </div>
 
+<div class="channel-card">
+
+<div class="card">
+<h2>🇲🇾 Malay Songs</h2>
+<p>Koleksi lagu Melayu original AI.</p>
+
+<a class="btn"
+href="https://www.youtube.com/playlist?list=PLj0uaK-z99pKbZ3wGTsWrPMHtgRWtSUMK"
+target="_blank">
+Listen Now
+</a>
+
 </div>
 
-<div id="playerArea">
+<div class="card">
+<h2>🇬🇧 English Songs</h2>
+<p>AI English love songs and emotional music.</p>
 
-<iframe id="radioPlayer"
-src="https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pKbZ3wGTsWrPMHtgRWtSUMK"
-allow="autoplay; encrypted-media"
-allowfullscreen>
-</iframe>
+<a class="btn"
+href="https://www.youtube.com/playlist?list=PLj0uaK-z99pJcJnyd3hLqe2riXQ1FvxHV"
+target="_blank">
+Listen Now
+</a>
+
+</div>
+
+<div class="card">
+<h2>🇮🇳 Hindi Songs</h2>
+<p>Romantic Hindi AI music collection.</p>
+
+<a class="btn"
+href="https://www.youtube.com/playlist?list=PLj0uaK-z99pLTFtaG_9kKIOfZPudGz9u4"
+target="_blank">
+Listen Now
+</a>
+
+</div>
 
 </div>
 
 <div class="footer">
-Romantic AI Music Radio
+
+YouTube Channel:
+<br><br>
+
+<a
+href="https://www.youtube.com/@romanticaimusic-b5h"
+style="color:#1DB954;"
+target="_blank">
+
+Romantic AI Music
+
+</a>
+
 </div>
-
-<script>
-
-const player =
-document.getElementById("radioPlayer");
-
-function loadMalay(){
-
-player.src =
-"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pKbZ3wGTsWrPMHtgRWtSUMK";
-
-}
-
-function loadEnglish(){
-
-player.src =
-"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pJcJnyd3hLqe2riXQ1FvxHV";
-
-}
-
-function loadHindi(){
-
-player.src =
-"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pLTFtaG_9kKIOfZPudGz9u4";
-
-}
-
-</script>
 
 </body>
 </html>
