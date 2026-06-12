@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SSR Music Radio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#121212;
+color:white;
+text-align:center;
+}
+
+.header{
+padding:30px;
+}
+
+.logo{
+font-size:40px;
+font-weight:bold;
+}
+
+.subtitle{
+color:#bbbbbb;
+}
+
+.cover{
+width:250px;
+height:250px;
+border-radius:20px;
+margin-top:20px;
+object-fit:cover;
+box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.buttons{
+margin-top:25px;
+}
+
+button{
+padding:12px 25px;
+margin:8px;
+font-size:16px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#1DB954;
+color:white;
+}
+
+button:hover{
+opacity:.8;
+}
+
+.channel{
+margin-top:30px;
+}
+
+iframe{
+border:none;
+width:90%;
+height:500px;
+border-radius:20px;
+margin-top:20px;
+}
+
+.footer{
+margin-top:30px;
+padding:20px;
+color:#888;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+🎵 SSR Music Radio
+</div>
+
+<div class="subtitle">
+AI Music • English • Malay • Hindi
+</div>
+
+<img class="cover"
+src="https://yt3.googleusercontent.com/ytc-placeholder=s176-c-k-c0x00ffffff-no-rj"
+id="cover">
+
+<div class="channel">
+
+<button onclick="loadMalay()">
+🇲🇾 Malay
+</button>
+
+<button onclick="loadEnglish()">
+🇬🇧 English
+</button>
+
+<button onclick="loadHindi()">
+🇮🇳 Hindi
+</button>
+
+</div>
+
+</div>
+
+<div id="playerArea">
+
+<iframe id="radioPlayer"
+src="https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pKbZ3wGTsWrPMHtgRWtSUMK"
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="footer">
+Romantic AI Music Radio
+</div>
+
+<script>
+
+const player =
+document.getElementById("radioPlayer");
+
+function loadMalay(){
+
+player.src =
+"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pKbZ3wGTsWrPMHtgRWtSUMK";
+
+}
+
+function loadEnglish(){
+
+player.src =
+"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pJcJnyd3hLqe2riXQ1FvxHV";
+
+}
+
+function loadHindi(){
+
+player.src =
+"https://www.youtube.com/embed/videoseries?list=PLj0uaK-z99pLTFtaG_9kKIOfZPudGz9u4";
+
+}
+
+</script>
+
+</body>
+</html>
